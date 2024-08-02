@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "SmtpLogsParser", "SmtpLogsParser\SmtpLogsParser.fsproj", "{31CC9C3E-04BD-48B2-91E4-E0BD84C6F0C6}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "SmtpLogsParser.Tests", "SmtpLogsParser.Tests\SmtpLogsParser.Tests.fsproj", "{871E7B09-EB05-44B5-B085-B2DA2E480955}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31CC9C3E-04BD-48B2-91E4-E0BD84C6F0C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31CC9C3E-04BD-48B2-91E4-E0BD84C6F0C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31CC9C3E-04BD-48B2-91E4-E0BD84C6F0C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31CC9C3E-04BD-48B2-91E4-E0BD84C6F0C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{871E7B09-EB05-44B5-B085-B2DA2E480955}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{871E7B09-EB05-44B5-B085-B2DA2E480955}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{871E7B09-EB05-44B5-B085-B2DA2E480955}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{871E7B09-EB05-44B5-B085-B2DA2E480955}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
