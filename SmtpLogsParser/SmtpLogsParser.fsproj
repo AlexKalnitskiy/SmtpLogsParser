@@ -8,9 +8,14 @@
     <ItemGroup>
         <Compile Include="Library.fs"/>
         <None Include="Demo.fsx" />
+        <Compile Include="Token.fs" />
+        <Compile Include="MetaString.fs" />
         <Compile Include="Parsers\DomainParser.fs" />
         <Compile Include="Parsers\EmailParser.fs" />
         <Compile Include="Parsers\IPParser.fs" />
+        <Compile Include="Parsers\SmtpCodeParser.fs" />
+        <Compile Include="Parsers\ParenthesisParser.fs" />
+        <Compile Include="Parsers\SmtpResponseParser.fs" />
     </ItemGroup>
 
     <ItemGroup>

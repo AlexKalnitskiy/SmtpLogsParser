@@ -3,4 +3,5 @@
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;MSTest::871E7B09-EB05-44B5-B085-B2DA2E480955::net8.0::SmtpLogsParser.Tests.TestClass.TestMethodPassing&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
-&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
+&lt;/SessionState&gt;</s:String>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=emss/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>

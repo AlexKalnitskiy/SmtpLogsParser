@@ -21,4 +21,8 @@
         <PackageReference Include="MSTest.TestFramework" Version="3.1.1"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\SmtpLogsParser\SmtpLogsParser.fsproj" />
+    </ItemGroup>
+
 </Project>
