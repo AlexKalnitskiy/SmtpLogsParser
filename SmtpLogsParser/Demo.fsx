@@ -29,7 +29,7 @@ let emailParser : Parser<string, unit> =
         (fun user _ dom -> user + "@" + dom)
     
 let multipleEmailsParser =
-    sepBy emailParser spaces1 |>> String.concat " -+- "
+    sepBy emailParser spaces1 .>> eof |>> String.concat " -+- "
     
 test emailParser "surrenderplease@gmail.com!#@";
-test multipleEmailsParser "surrenderplease@gmail.com sur333333333renderplease@gmail.com surrenderplease@gmail.com"
+test multipleEmailsParser "surrenderplease@gmail.com!!@ sur333333333renderplease@gmail.com surrenderplease@gmail.com"
