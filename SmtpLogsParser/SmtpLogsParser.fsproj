@@ -8,7 +8,9 @@
     <ItemGroup>
         <Compile Include="Library.fs"/>
         <None Include="Demo.fsx" />
-        <None Include="DemoTwo.fsx" />
+        <Compile Include="Parsers\DomainParser.fs" />
+        <Compile Include="Parsers\EmailParser.fs" />
+        <Compile Include="Parsers\IPParser.fs" />
     </ItemGroup>
 
     <ItemGroup>
