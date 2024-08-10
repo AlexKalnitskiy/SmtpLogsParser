@@ -7,7 +7,6 @@ open Token
      
      let renderToken token =
         match token with
-        | Parenthesis (p1, b, p2) -> [ p1.ToString(); render b; p2.ToString() ] |> String.concat ""
         | IPAddress _ -> "{{IP}}"
         | Hostname _ -> "{{HOSTNAME}}"
         | Mailbox _ -> "{{MAILBOX}}"
@@ -15,7 +14,7 @@ open Token
         | Word w -> w
         | SpaceBar s -> s
         | PunctuationMark p -> p
-        | Volatility _ -> "{{VOLATILITY}}"
+        | Identifier _ -> "{{IDENTIFIER}}"
      
      tokens |> Seq.map renderToken |> String.concat ""
 

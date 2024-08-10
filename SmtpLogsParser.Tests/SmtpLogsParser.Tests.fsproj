@@ -10,7 +10,6 @@
 
     <ItemGroup>
         <Compile Include="Tests.fs"/>
-        <Compile Include="Examples.fs" />
     </ItemGroup>
 
     <ItemGroup>

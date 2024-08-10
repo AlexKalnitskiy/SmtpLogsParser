@@ -14,7 +14,6 @@
         <Compile Include="Parsers\EmailParser.fs" />
         <Compile Include="Parsers\IPParser.fs" />
         <Compile Include="Parsers\SmtpCodeParser.fs" />
-        <Compile Include="Parsers\ParenthesisParser.fs" />
         <Compile Include="Parsers\SmtpResponseParser.fs" />
     </ItemGroup>
 

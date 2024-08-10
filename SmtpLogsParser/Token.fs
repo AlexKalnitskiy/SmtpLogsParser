@@ -1,7 +1,6 @@
 ﻿module SmtpLogsParser.Token
 
 type Token =
-    | Parenthesis of char * Token list * char
     | IPAddress of string
     | Hostname of string
     | Mailbox of string
@@ -9,4 +8,4 @@ type Token =
     | Word of string
     | SpaceBar of string
     | PunctuationMark of string
-    | Volatility of string
+    | Identifier of string
