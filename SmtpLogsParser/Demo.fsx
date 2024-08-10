@@ -3,6 +3,7 @@
 #load "Parsers/EmailParser.fs"
 #load "Parsers/IPParser.fs"
 #load "Parsers/SmtpCodeParser.fs"
+#load "Parsers/ParenthesisParser.fs"
 #load "Token.fs"
 #load "MetaString.fs"
 #load "Parsers/SmtpResponseParser.fs"
@@ -17,7 +18,7 @@ let test p str =
     | Failure(errorMsg, _, _) -> printfn "Failure: %s" errorMsg
 
 let logLines =
-    [ "451- 4.7.652 The mail server [88.216.57.52] has exceeded the maximum number of connections. (S3115) [DU6PEPF0000A7E0.eurprd02.prod.outlook.com 2024-08-01T10:08:12.503Z 08DCAFACFDA32292]"
+    [ "(451- 4.7.652 The mail server) [88.216.57.52] has exceeded the maximum number of connections. (S3115) [DU6PEPF0000A7E0.eurprd02.prod.outlook.com 2024-08-01T10:08:12.503Z 08DCAFACFDA32292]"
       "451- 4.7.652 The mail server [88.216.57.47] has exceeded the maximum number of connections. (S3115) [AM4PEPF00025F95.EURPRD83.prod.outlook.com 2024-08-01T10:07:56.868Z 08DCAF99A3203CA8]"
       "451-4.3.2 Temporary server error. Please try again later ATTR17 [DU6PEPF0000B61C.eurprd02.prod.outlook.com 2024-08-01T09:32:01.894Z 08DCAFB9AE5EA650]"
       "451-4.3.2 Temporary server error. Please try again later ATTR17 [00B61CB9AE5EA650.eurprd02.prod.outlook.com 2024-08-01T09:32:01.894Z AE5EA650000B61C]"

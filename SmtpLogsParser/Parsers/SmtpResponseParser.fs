@@ -18,17 +18,19 @@ let punctuationMark: Parser<Token, unit> = anyOf ",.!?:;" |>> _.ToString() |>> P
 let word: Parser<Token, unit> = many1Satisfy isLetter |>> Word
 let volatility: Parser<Token, unit> = many1Satisfy (fun c -> c <> ' ') |>> Volatility
 
-let rec anyTokenParser: Parser<Token, unit> =
-         let parenthesis = parenthesisParser anyTokenParser
-         choice [
-             attempt parenthesis
-             attempt mailboxParser
-             attempt ipAddressParser
-             attempt hostnameParser
-             attempt smtpCodeParser
-             attempt word
-             attempt punctuationMark
-             attempt spaceBarParser
-             volatility
-         ]
-let smtpResponseParser = many1 anyTokenParser .>> eof
+let anyTokenParser, anyTokenParserRef = createParserForwardedToRef<Token, unit>()
+let manyOneParenthesis = parenthesisParser (many1 anyTokenParser) |>> fun x -> Parenthesis('[', x, ']')
+
+do anyTokenParserRef.Value <- choice [
+    attempt manyOneParenthesis
+    attempt mailboxParser
+    attempt ipAddressParser
+    attempt hostnameParser
+    attempt smtpCodeParser
+    attempt word
+    attempt punctuationMark
+    attempt spaceBarParser
+    volatility
+]
+
+let rec smtpResponseParser = many1 anyTokenParser .>> eof
