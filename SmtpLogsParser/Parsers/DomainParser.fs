@@ -1,14 +1,16 @@
 ﻿module SmtpLogsParser.Parsers.DomainParser
 
 open FParsec
-let domainParser =
-    let identifierParser: Parser<string, unit> =
-        many1SatisfyL (fun c -> isLetter c || isDigit c || c = '-') "identifier"
-    let tld = many1SatisfyL isLetter "tld"
-    let dotParser: Parser<unit, unit> =
-        skipChar '.'
-    let domainPartParser: Parser<string, unit> =
-        identifierParser .>> dotParser
-    let manyPartsParser: Parser<string list, unit> =
-        many (attempt domainPartParser)
-    domainPartParser .>>. manyPartsParser .>>. tld |>> fun ((prefix, items), suffix) -> prefix :: items @ [suffix] |> String.concat "."
+
+    
+let domainParser: Parser<string, unit> =
+    let label = 
+        let firstChar = letter <|> digit
+        let subsequentChar = letter <|> digit <|> pchar '-'
+        pipe2 firstChar (many subsequentChar) (fun first rest -> first :: rest |> System.String.Concat)
+      
+    let validTld e = not (Seq.contains '-' e)
+           
+    let result = sepBy1 label (pchar '.') >>= fun labels -> if List.length labels > 1 && (labels |> List.last) |> validTld then preturn labels else fail "hostname os not valid"
+    
+    result |>> String.concat "."

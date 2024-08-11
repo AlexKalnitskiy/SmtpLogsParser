@@ -18,7 +18,7 @@ let test p str =
 
 let logLines =
     [
-        "540-5.7.1 <mensdelelecces@rambler.ru.>: recipient address rejected: Inactive"
+        "540-5.7.1 <mensdelelecces@rambler.ru..>: recipient address rejected: Inactive"
         "540-5.7.1 <mensd2elelecces@rambler.ru>: recipient address rejected: Inactive"
         "540-5.7.1 <mensdele2lecces@rambler.ru>: recipient address rejected: Inactive"
         "540-5.7.1 <mensdelelecces@rambler.ru>: recipient address rejected: Inactive"
@@ -37,7 +37,7 @@ let logLines =
         "451-4.7.0 Temporary server error. Please try again later. D7RX9 RemoteHost: PH7P222CA0012. ErrorCode 10054 [SA2PEPF000015C7.namprd03.prod.outlook.com 2024-07-31T13:33:32.734Z 08PEPF00636PEPF00D7]"
         "451-4.3.0 Try again later 1722509182-GkULpI6Ax8c0-KgMovYjw"
         "451-4.3.0 Try again later 1725688609-GkUtyLpI-87Ax8c0-KgYjw"
-        "421- Try again later (193.58.159.185). Please contact abuse@corp.mail.ru."
+        "421- Try again later (193.58.159.185). Please contact abuse@corp.mail.ru ."
         "421- Try again later (193.54.179.175). Please contact abuse@corp.mail.ru."
         "550- Message was not accepted -- invalid mailbox. Local mailbox ev.kosykh-2005@mail.ru is unavailable: user not found"
         "550-5.7.1 [185.99.9.147 12] Gmail has detected that this message is likely unsolicited mail. To reduce the amount of spam sent to Gmail, this message has been blocked. For more information, go to https://support.google.com/mail/?p=UnsolicitedMessageError 38308e7fff4ca-2f03d196db7si15964611fa.640 - gsmtp"
