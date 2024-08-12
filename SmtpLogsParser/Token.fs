@@ -2,6 +2,7 @@
 
 type Token =
     | IPAddress of string
+    | Url of string
     | Hostname of string
     | Mailbox of string
     | SmtpCode of string

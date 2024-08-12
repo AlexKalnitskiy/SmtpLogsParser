@@ -5,6 +5,7 @@
 #load "Parsers/SmtpCodeParser.fs"
 #load "Token.fs"
 #load "MetaString.fs"
+#load "Parsers/UrlParser.fs"
 #load "Parsers/SmtpResponseParser.fs"
 
 open FParsec

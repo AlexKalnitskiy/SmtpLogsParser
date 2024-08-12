@@ -1,7 +1,5 @@
 namespace SmtpLogsParser.Tests
 
-open SmtpLogsParser.Parsers
-open SmtpResponseParser
 open FsCheck
 open Microsoft.VisualStudio.TestTools.UnitTesting
 

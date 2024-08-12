@@ -13,6 +13,7 @@
         <Compile Include="Parsers\EmailParser.fs" />
         <Compile Include="Parsers\IPParser.fs" />
         <Compile Include="Parsers\SmtpCodeParser.fs" />
+        <Compile Include="Parsers\UrlParser.fs" />
         <Compile Include="Parsers\SmtpResponseParser.fs" />
     </ItemGroup>
 

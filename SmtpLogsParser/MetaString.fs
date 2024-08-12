@@ -8,6 +8,7 @@ open Token
      let renderToken token =
         match token with
         | IPAddress _ -> "{{IP}}"
+        | Url _ -> "{{URL}}"
         | Hostname _ -> "{{HOSTNAME}}"
         | Mailbox _ -> "{{MAILBOX}}"
         | SmtpCode _ -> "{{SMTPCODE}}"
