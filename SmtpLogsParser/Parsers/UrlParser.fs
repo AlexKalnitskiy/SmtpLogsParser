@@ -11,7 +11,7 @@ let urlParser : Parser<string, unit> =
     
     let pathParser = opt (pchar '/' >>. manySatisfy (fun c -> c <> '?' && c <> '#'))
     
-    let queryParamParser = sepBy (manySatisfy (fun c -> c <> '=' && c <> '&') .>> pchar '=' .>>. manySatisfy (fun c -> c <> '&')) (pchar '&')
+    let queryParamParser = sepBy (manySatisfy (fun c -> c <> '=' && c <> '&' && c <> ' ') .>> pchar '=' .>>. manySatisfy (fun c -> c <> '&' && c <> ' ')) (pchar '&')
     
     let queryParser = opt (pchar '?' >>. queryParamParser)
     
