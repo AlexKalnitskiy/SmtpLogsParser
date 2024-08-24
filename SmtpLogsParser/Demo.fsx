@@ -18,7 +18,8 @@ let test p str =
     | Failure(errorMsg, _, _) -> printfn $"Failure: {errorMsg}"
 
 let logLines =
-    [ "540-5.7.1 <mensdelelecces@rambler.ru..>: recipient address rejected: Inactive"
+    [ "550- \"Sorry, no messages accepted due to spam attack\""
+      "540-5.7.1<mensdelelecces@rambler.ru..>: recipient address rejected: Inactive"
       "540-5.7.1 <mensd2elelecces@rambler.ru>: recipient address rejected: Inactive"
       "540-5.7.1 <mensdele2lecces@rambler.ru>: recipient address rejected: Inactive"
       "540-5.7.1 <mensdelelecces@rambler.ru>: recipient address rejected: Inactive"
