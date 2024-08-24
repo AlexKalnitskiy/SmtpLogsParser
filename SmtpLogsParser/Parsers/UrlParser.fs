@@ -5,7 +5,7 @@ open FParsec
 
 let urlParser: Parser<string, unit> =
 
-    let schemeParser = pstring "https://"
+    let schemeParser = pstring "https://" <|> pstring "http://"
 
     let portParser = opt (pchar ':' >>. pint32)
 

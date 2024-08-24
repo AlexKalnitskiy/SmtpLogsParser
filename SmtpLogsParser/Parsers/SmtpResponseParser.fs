@@ -21,7 +21,7 @@ let smtpResponseParser =
         many1Satisfy (fun x -> x = ' ') |>> SpaceBar
 
     let punctuationMark: Parser<Token, unit> =
-        anyOf "\"-,.!?:;<[()]>" |>> _.ToString() |>> PunctuationMark
+        anyOf "\"-,.!?:;<[()]>=" |>> _.ToString() |>> PunctuationMark
 
     let word: Parser<Token, unit> =
         many1Satisfy (fun x -> isLetter x || x = ''') .>> notFollowedBy digit |>> Word

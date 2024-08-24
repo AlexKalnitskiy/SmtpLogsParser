@@ -23,5 +23,6 @@ let rec render tokens =
         | SpaceBar s -> s
         | PunctuationMark p -> p |> escapeRegexCharacters
         | Identifier _ -> "\S+"
+        | DateTime _ -> "\S+"
 
     tokens |> Seq.map renderToken |> String.concat ""
