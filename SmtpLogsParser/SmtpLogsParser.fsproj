@@ -15,6 +15,7 @@
         <Compile Include="Parsers\IPParser.fs" />
         <Compile Include="Parsers\SmtpCodeParser.fs" />
         <Compile Include="Parsers\UrlParser.fs" />
+        <Compile Include="Parsers\DateTimeParser.fs" />
         <Compile Include="Parsers\SmtpResponseParser.fs" />
         <Compile Include="Output\Parser.fs" />
         <None Include="Test.fsx" />

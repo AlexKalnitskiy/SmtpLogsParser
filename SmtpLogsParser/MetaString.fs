@@ -13,6 +13,7 @@ let rec render tokens =
         | Mailbox _ -> "{{MAILBOX}}"
         | SmtpCode _ -> "{{SMTPCODE}}"
         | Word w -> w
+        | DateTime _ -> "{{DATETIME}}"
         | SpaceBar s -> s
         | PunctuationMark p -> p
         | Identifier _ -> "{{IDENTIFIER}}"

@@ -8,6 +8,7 @@ open FParsec
 open UrlParser
 open SmtpLogsParser
 open Token
+open DateTimeParser
 
 let smtpResponseParser =
     let hostnameParser = domainParser |>> Hostname
@@ -28,10 +29,13 @@ let smtpResponseParser =
     let urlParser: Parser<Token, unit> = urlParser |>> Url
 
     let identifier: Parser<Token, unit> = sepBy1 (many1Satisfy (fun c -> isLetter c || isDigit c)) (anyOf "-_") |>> fun x -> Identifier (String.concat "" x)
+    
+    let dateTime: Parser<Token, unit> = dateTimeParser |>> DateTime
 
     let anyTokenParser =
         choice
             [
+              attempt dateTime
               attempt smtpCodeParser
               attempt smtpExtendedCodeParser
               attempt urlParser
