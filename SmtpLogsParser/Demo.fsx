@@ -19,7 +19,16 @@ let test p str =
     | Failure(errorMsg, _, _) -> printfn $"Failure: {errorMsg}"
 
 let logLines =
-    [ "550- \"Sorry, no messages accepted due to spam attack\""
+    [
+      "550- Mailbox unavailable or access denied [MJ8vvB3Z9HILDyk+wodtP4OmNhYCOy7YpEZnRextO1oq5vW0RCUUNrDzqw1hdKV1Lg== IP: 185.195.169.206]. https://service.mail.qq.com/detail/0/166."
+      "554-5.7.1 <s1.mbx-sender-02.ru[185.99.9.172]>: Client host rejected: #652 SPAM mindbox.ru. For assistance, call +7(495)788-0999 int.755911. Please provide the following information in your problem report: time (Aug 22 14:05:10, MSK), client (185.99.9.172) and server (relay6.alfastrah.ru)."
+      "550- Rejected: signature_incorrect"
+      "550- rejected because 193.243.174.181 is in a black list at zen.spamhaus.org\nListed by CSS, see https://check.spamhaus.org/query/ip/193.243.174.181"
+      "550-5.7.0 SPAM type=spam - Not spam? Contact spamadmin@mediabeam.net with reference ID 149169::1724324653-C97F911D-9B004426/10/56527156675 to resolve this issue."
+      "550- rejected because 185.99.9.136 is in a black list at zen.spamhaus.org\nListed by CSS, see https://check.spamhaus.org/query/ip/185.99.9.136"
+      "550- \"No such user / У нас нет такого почтового ящика\""
+      "550- Mailbox unavailable or access denied [MJ8vvB3Z9HILDyk+wodtP4NN5hlvVmA/HTz1q10yWXm7nKV2VI8TUoIBD2qzvweSUg== IP: 193.243.174.182]. https://service.mail.qq.com/detail/0/166."
+      "550- \"Sorry, no messages accepted due to spam attack\""
       "540-5.7.1<mensdelelecces@rambler.ru..>: recipient address rejected: Inactive"
       "540-5.7.1 <mensd2elelecces@rambler.ru>: recipient address rejected: Inactive"
       "540-5.7.1 <mensdele2lecces@rambler.ru>: recipient address rejected: Inactive"

@@ -13,3 +13,4 @@ type Token =
     | SpaceBar of string
     | PunctuationMark of string
     | Identifier of string
+    | Unknown of string

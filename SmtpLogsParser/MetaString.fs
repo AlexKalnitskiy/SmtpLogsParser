@@ -17,5 +17,6 @@ let rec render tokens =
         | SpaceBar s -> s
         | PunctuationMark p -> p
         | Identifier _ -> "{{IDENTIFIER}}"
+        | Unknown _ -> "{{UNKNOWN}}"
 
     tokens |> Seq.map renderToken |> String.concat ""

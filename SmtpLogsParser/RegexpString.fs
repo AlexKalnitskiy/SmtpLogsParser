@@ -24,5 +24,6 @@ let rec render tokens =
         | PunctuationMark p -> p |> escapeRegexCharacters
         | Identifier _ -> "\S+"
         | DateTime _ -> "\S+"
+        | Unknown _ -> "\S+"
 
     tokens |> Seq.map renderToken |> String.concat ""
